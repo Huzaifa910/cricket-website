@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./createPlayer.css";
+import "./createplayer.css";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { doc, setDoc, } from "firebase/firestore";
