@@ -6,6 +6,7 @@ import Login from "./pages/login";
 import About from "./pages/about";
 import PrivateRoute from "./routes/privateRoute";
 import AuthRoute from "./routes/authRoute";
+import PlayerProfile from "./pages/playerprofile";
 
 const App = () => {
   return (
@@ -20,6 +21,8 @@ const App = () => {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/createPlayer" element={<CreatePlayer />} />
           <Route path="/about" element={<About />} />
+          <Route path="/player/:playerId" element={<PlayerProfile />} />
+
         </Route>
       </Routes>
     </div>

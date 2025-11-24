@@ -14,14 +14,17 @@
 .team-name {
   font-size: 2.5rem;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 4px;
   margin-bottom: 10px;
+  cursor: default;
 }
 
 .subtitle {
   font-size: 1rem;
   opacity: 0.9;
   margin-bottom: 30px;
+  cursor: default;
+
 }
 
 /* Form Styling */
@@ -57,7 +60,7 @@
 }
 
 .auth-btn:hover {
-  background: #ffb300;
+  background: #d1960d;
 }
 
 /* Redirect text */
