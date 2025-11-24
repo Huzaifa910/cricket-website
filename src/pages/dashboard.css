@@ -1,0 +1,310 @@
+    *{
+          font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+    }
+
+
+
+    /* ✅ Navbar Styles */
+.navbar {
+  width: 100%;
+  /* background-color: #0b1a33; */
+  /* background: linear-gradient(135deg, #0b3d91, #1976d2); */
+
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-btn {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background-color: white;
+  color: #0b1a33;
+}
+
+.logout {
+  background-color: #e63946;
+  border: none;
+}
+
+.logout:hover {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Rotate when open */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(7px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-7px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    background-color: #0b1a33;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 10px 0;
+    border-top: 1px solid #1a2a4f;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+
+
+/* 🌟 General Layout */
+.dashboard {
+  /* background-color: #f6f9fc; */
+  background: linear-gradient(135deg, #0b3d91, #1976d2);
+  min-height: 100vh;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* HEADER */
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.dashboard-header h1 {
+  font-size: 35px;
+  color: #f6f9fc;
+  font-weight: 800;
+  letter-spacing: 5px;
+  margin-bottom: 5px;
+}
+.dashboard-header p {
+    
+  color: #c4c0c0;
+  font-size: 0.95rem;
+}
+
+/* STATS SECTION */
+.dashboard-stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.stat-card {
+  background: white;
+  flex: 1 1 45%;
+  min-width: 140px;
+  max-width: 200px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+.stat-card h3 {
+  font-size: 1rem;
+  color: #222;
+}
+.stat-card p {
+  font-size: 1.4rem;
+  color: #007bff;
+  font-weight: bold;
+  margin-top: 3px;
+}
+
+/* PLAYERS SECTION */
+.players-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.players-section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #0056b3;
+  text-align: center;
+}
+
+/* GRID LAYOUT (mobile-first) */
+.players-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+/* PLAYER CARD */
+.player-card {
+  background: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 12px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.player-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+.player-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+.player-card h3 {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #333;
+}
+.player-role {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+.view-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.3s;
+}
+.view-btn:hover {
+  background: #0056b3;
+}
+
+/* CREATE PROFILE BUTTON */
+.create-btn {
+  background-color: #00b36b;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.3s ease;
+}
+.create-btn:hover {
+  background-color: #00995a;
+}
+
+/* Responsive button */
+@media (max-width: 480px) {
+  .create-btn {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+}
+
+
+
+/* 📱 Mobile Optimization */
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 15px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .stat-card {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+
+  .players-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+  }
+
+  .player-img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header h1 {
+    font-size: 1.3rem;
+  }
+  .dashboard-header p {
+    font-size: 0.9rem;
+  }
+
+  .players-section {
+    padding: 15px;
+  }
+
+  .view-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
